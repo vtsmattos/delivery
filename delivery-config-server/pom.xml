@@ -3,9 +3,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.ninq</groupId>
-	<artifactId>delivery-config_server</artifactId>
+	<artifactId>delivery-config-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>delivery-config_server</name>
+	<name>delivery-config-server</name>
 	<description>Config Server</description>
 
 	<properties>
