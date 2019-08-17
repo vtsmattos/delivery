@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.ninq.delivery.order.model.Order;
+import br.com.ninq.delivery.order.model.Pedido;
 import br.com.ninq.delivery.order.service.OrderService;
 
 @RestController
@@ -20,17 +20,17 @@ public class OrderController {
     private OrderService orderService;
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<Order> save(@RequestBody  Order order){
+    public ResponseEntity<Pedido> save(@RequestBody  Pedido order){
         return ResponseEntity.ok(orderService.save(order));
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Order> findById(@PathVariable("id") Integer id){
+    public ResponseEntity<Pedido> findById(@PathVariable("id") Integer id){
         return ResponseEntity.ok(orderService.findById(id));
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<Iterable<Order>> findAll(){
+    public ResponseEntity<Iterable<Pedido>> findAll(){
         return ResponseEntity.ok().body(orderService.findAll());
     }
 
@@ -40,9 +40,9 @@ public class OrderController {
         return ResponseEntity.ok().build();
     }
     
-    @RequestMapping(method = RequestMethod.GET)
-    public ResponseEntity<Order> test(){
-    	Order order = new Order();
+    @RequestMapping(value = "/teste",method = RequestMethod.GET)
+    public ResponseEntity<Pedido> test(){
+    	Pedido order = new Pedido();
     	order.setId(0);
     	order.setPrice(20.5);
     	order.setProduct("Teste");

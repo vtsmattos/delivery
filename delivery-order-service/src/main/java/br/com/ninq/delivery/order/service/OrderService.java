@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 
-import br.com.ninq.delivery.order.model.Order;
+import br.com.ninq.delivery.order.model.Pedido;
 import br.com.ninq.delivery.order.repository.OrderRepository;
 
 @Service
@@ -14,15 +14,15 @@ public class OrderService {
     @Autowired
     private OrderRepository orderRepository;
 
-    public Order save(@Validated Order order) {
+    public Pedido save(@Validated Pedido order) {
         return orderRepository.save(order);
     }
 
-    public Order findById(Integer id){
+    public Pedido findById(Integer id){
         return orderRepository.findOne(id);
     }
 
-    public Iterable<Order> findAll(){
+    public Iterable<Pedido> findAll(){
         return orderRepository.findAll();
     }
 

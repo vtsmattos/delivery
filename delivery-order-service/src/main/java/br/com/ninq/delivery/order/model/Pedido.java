@@ -8,8 +8,8 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "order")
-public class Order implements Serializable {
+@Table(name = "pedido")
+public class Pedido implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
