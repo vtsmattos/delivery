@@ -9,7 +9,9 @@
 	<modules>
 		<module>../delivery-config-server</module>
 		<module>../delivery-eureka-server</module>
+		<module>../delivery-gateway-server</module>
 		<module>../delivery-auth-server</module>
+		<module>../delivery-order-service</module>
 	</modules>
   
 </project>
