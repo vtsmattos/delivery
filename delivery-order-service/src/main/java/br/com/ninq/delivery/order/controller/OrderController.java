@@ -13,7 +13,7 @@ import br.com.ninq.delivery.order.model.Pedido;
 import br.com.ninq.delivery.order.service.OrderService;
 
 @RestController
-@RequestMapping(value = "/api/orders", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 public class OrderController {
 
     @Autowired
